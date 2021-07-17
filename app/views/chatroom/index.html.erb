@@ -7,48 +7,51 @@
     <div class="ui fluid raised card chatbox">
       <div class="content">
         <div class="ui feed">
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                 <em>Elliot Fu</em>: Test message of Elliot
-              </div>
-            </div>
-          </div>
+
+          <% @messages.each do |message| %>
             <div class="event">
-                <div class="content">
-                    <div class="summary">
-                        <em>Stevie Feliciano</em>: Test message of Stevie
-                    </div>
+              <div class="content">
+                <div class="summary">
+                  <em><%= message.user.username%></em>: <%= message.body %>
                 </div>
-            </div>
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                 <em>Helen Troy</em>: Test message of Helen
               </div>
             </div>
-          </div>
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                 <em>Christian Rocha</em>: Test message of Christian
+              <div class="event">
+                  <div class="content">
+                      <div class="summary">
+                        <em><%= message.user.username%></em>: <%= message.body %>
+                      </div>
+                  </div>
+              </div>
+            <div class="event">
+              <div class="content">
+                <div class="summary">
+                  <em><%= message.user.username%></em>: <%= message.body %>
+                </div>
+              </div>
             </div>
-          </div>
+            <div class="event">
+              <div class="content">
+                <div class="summary">
+                  <em><%= message.user.username%></em>: <%= message.body %>
+                </div>
+              </div>
+            </div>
+          <%end%>
         </div>
       </div>
-    </div>
-      <div class="extra content">
-         <form class="ui reply form">
-             <div class="field">
-                 <div class="ui fluid icon input">
+        <div class="extra content">
+          <form class="ui reply form">
+              <div class="field">
+                  <div class="ui fluid icon input">
                     <input type="text" placeholder="Enter a message...">
                     <i class="bordered inverted purple edit icon"></i>
                   </div>
               </div>
-         </form>
-       </div>
+          </form>
+        </div>
     </div>
-    </div>
+  </div>
         <div class="four wide column">
             <div class="ui fluid raised card chatbox">
                 <div class="content">
